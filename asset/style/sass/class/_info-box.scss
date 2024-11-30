@@ -1,0 +1,96 @@
+$info-bg-color: #f9f9f9;
+$info-text-color: #333;
+$border-radius: 0.25rem;
+$info-padding: 10px;
+
+.info-box {
+    position: relative;
+    display: inline-block;
+    margin: 20px; /* Alan bırakmak için */
+
+    .info {
+        visibility: hidden; /* Başlangıçta görünmez */
+        opacity: 0; /* Başlangıçta saydam */
+        position: absolute;
+        background-color: $info-bg-color;
+        color: $info-text-color;
+        border-radius: $border-radius;
+        padding: $info-padding;
+        transition: opacity 0.2s ease, visibility 0.2s ease; /* Geçiş animasyonu */
+        width: max-content;
+        pointer-events: none;
+        font-size: .75rem;
+
+        // Ok işareti
+        &::after {
+            content: '';
+            position: absolute;
+            border-width: 5px;
+            border-style: solid;
+            border-color: $info-bg-color transparent transparent transparent; /* Ok rengi */
+        }
+    }
+
+    // Alttan bilgi kutusu
+    &.bottom .info {
+        bottom: 100%; /* Elemanın üstünde konumlandır */
+        left: 50%;
+        transform: translateX(-50%); /* Ortalamak için */
+        
+        &::after {
+            top: 100%; /* Kutunun altına yerleştir */
+            left: 50%;
+            margin-left: -5px; /* Ortalamak için */
+        }
+    }
+
+    // Üstten bilgi kutusu
+    &.top .info {
+        top: 100%; /* Elemanın altında konumlandır */
+        left: 50%;
+        transform: translateX(-50%); /* Ortalamak için */
+        
+        &::after {
+            bottom: 100%; /* Kutunun üstüne yerleştir */
+            left: 50%;
+            margin-left: -5px; /* Ortalamak için */
+            border-color: transparent transparent $info-bg-color transparent; /* Ok rengi */
+        }
+    }
+
+    // Soldan bilgi kutusu
+    &.left .info {
+        right: 100%; /* Elemanın sağında konumlandır */
+        top: 50%;
+        transform: translateY(-50%); /* Ortalamak için */
+        
+        &::after {
+            top: 50%;
+            right: 100%; /* Kutunun soluna yerleştir */
+            margin-top: -5px; /* Ortalamak için */
+            border-color: transparent transparent transparent $info-bg-color; /* Ok rengi */
+        }
+    }
+
+    // Sağdan bilgi kutusu
+    &.right .info {
+        left: 100%; /* Elemanın solunda konumlandır */
+        top: 50%;
+        transform: translateY(-50%); /* Ortalamak için */
+        
+        &::after {
+            top: 50%;
+            left: 100%; /* Kutunun sağına yerleştir */
+            margin-top: -5px; /* Ortalamak için */
+            border-color: transparent $info-bg-color transparent transparent; /* Ok rengi */
+        }
+    }
+
+    // Hover durumu
+    &:hover {
+        .info {
+            visibility: visible; /* Üzerine gelindiğinde görünür */
+            opacity: 1; /* Üzerine gelindiğinde görünür */
+        }
+    }
+}

@@ -1,0 +1,51 @@
+.dark-theme {
+    background-color: $dark-bg-color !important; 
+    color: $dark-text-color !important;
+
+    .primary-menu {
+        a, i {
+        color: $dark-text-color !important;
+        }
+        .right {
+            background-color: #000;
+        }
+    }
+    .info-box {
+        .info {
+            i {
+                color: $c-green !important;
+            }
+        }
+    }
+    .navbar {
+        background-color: #000;
+        a,i,button {
+        color: $dark-text-color !important;
+        }
+        #category-selector {
+            color: $dark-text-color;
+            background-color: $dark-bg-color !important;
+        }
+        .menu-preview {
+            background-color: #000 !important;
+            a {
+                &:hover {
+                    background-color: $d-hv-1 !important;
+                }
+            }
+        }
+        .menu-preview a, h3, p {
+            color: $dark-text-color;
+        }
+        input{
+            color: $dark-text-color;
+        }
+    }
+    .offcanvas {
+        .offcanvas-content {
+            background-color: $hv-6;
+            a, button { color: $dark-text-color !important; }
+        }
+    }
+}
+

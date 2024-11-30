@@ -1,0 +1,57 @@
+// Light Theme Variables
+$light-bg-color: rgb(249, 249, 249); // Beyaz arka plan
+$light-text-color: #333333; // Koyu gri yazı rengi
+$light-primary-color: #007bff; // Mavi ana renk
+$light-secondary-color: #6c757d; // Gri ikincil renk
+$light-border-color: #dddddd; // Açık gri sınır rengi
+
+// Dark Theme Variables
+$dark-bg-color: #121212; // Koyu arka plan
+$dark-text-color: #ffffff; // Beyaz yazı rengi
+$dark-primary-color: #1a73e8; // Koyu mavi ana renk
+$dark-secondary-color: #adb5bd; // Açık gri ikincil renk
+$dark-border-color: #444444; // Koyu gri sınır rengi
+
+// Theme Switching
+$bg-color: $light-bg-color; // Varsayılan arka plan rengi
+$text-color: $light-text-color; // Varsayılan yazı rengi
+$primary-color: $light-primary-color; // Varsayılan ana renk
+$secondary-color: $light-secondary-color; // Varsayılan ikincil renk
+$border-color: $light-border-color; // Varsayılan sınır rengi
+
+$c-red: rgb(145, 48, 43);
+$c-green: rgb(115, 143, 81);
+$c-aqua: rgb(84, 175, 166);
+$c-blue:rgb(42, 128, 119);
+$c-gray: rgb(39, 45, 48);
+
+// Dark theme kullanımı için
+// @mixin dark-theme {
+//     $bg-color: $dark-bg-color;
+//     $text-color: $dark-text-color;
+//     $primary-color: $dark-primary-color;
+//     $secondary-color: $dark-secondary-color;
+//     $border-color: $dark-border-color;
+// }
+
+$hv-1: rgba(0,0,0,.1);
+$hv-2: rgba(0,0,0,.2);
+$hv-3: rgba(0,0,0,.3);
+$hv-4: rgba(0,0,0,.4);
+$hv-5: rgba(0,0,0,.5);
+$hv-6: rgba(0,0,0,.6);
+$hv-7: rgba(0,0,0,.7);
+$hv-8: rgba(0,0,0,.8);
+$hv-9: rgba(0,0,0,.9);
+
+$d-hv-1: rgba(255,255,255,.1);
+$d-hv-2: rgba(255,255,255,.2);
+$d-hv-3: rgba(255,255,255,.3);
+$d-hv-4: rgba(255,255,255,.4);
+$d-hv-5: rgba(255,255,255,.5);
+$d-hv-6: rgba(255,255,255,.6);
+$d-hv-7: rgba(255,255,255,.7);
+$d-hv-8: rgba(255,255,255,.8);
+$d-hv-9: rgba(255,255,255,.9);
+
+@import "https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap";

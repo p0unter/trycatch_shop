@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="tr" class="media-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TryCatch Marketplace - Temiz iş, güven & güvence için 🧐</title>
+    <link rel="icon" type="image/x" href="asset/img/logo/maintrycatchlogocrop.png">
+
+    <link rel="stylesheet" href="asset/style/css/main.css">
+</head>
+<body>
+    <!-- NAV -->
+    <div class="primary-menu">
+        <div class="container">
+            <ul class="left">
+                <li class="item"><a href="#"><i class="ri-building-2-fill"></i>Hakkımızda</a></li>
+                <li class="item"><a href="#"><i class="ri-questionnaire-fill"></i>S.S.S</a></li>
+                <li class="item"><a href="#"><i class="ri-customer-service-2-fill"></i>İletişim</a></li>
+                <li class="item"><a href="#"><i class="ri-github-fill"></i>Github</a></li>
+            </ul>
+            <ul class="right">
+                <li class="login item">
+                    <a href="#">Giriş Yap</a>
+                </li>
+                <li class="register item">
+                    <a href="#">Kayıt Ol</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand">
+                <a href="index.html">
+                    <img src="asset/img/logo/trycatchlogovertical.png" alt="TryCatch Logo">
+                </a>
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item">
+                    <a href="#" class="info-box top" style="margin: 0 !important;"><i class="ri-store-2-line"></i> Market <span class="info"><i class="ri-corner-down-right-line"></i> Pazaryerine git</span></a>
+                </li>
+                <li class="menu-item slider-element">
+                    <button href="#" id="web-button"><i class="ri-pages-line"></i> Web <i class="ri-arrow-down-s-line arrow"></i></button>
+                </li>
+                <li class="menu-item slider-element">
+                    <button href="#" id="app-button"><i class="ri-window-line"></i> Program <i class="ri-arrow-down-s-line arrow"></i></button>
+                </li>
+                <li class="menu-item slider-element">
+                    <button href="#" id="game-button"><i class="ri-gamepad-line"></i> Oyun <i class="ri-arrow-down-s-line arrow"></i></button>
+                </li>
+
+                <li class="menu-preview">
+                    <div class="real">
+                        <div class="slider">
+                            <div class="element" id="b-web">
+                                <a href="#">
+                                    <h3>Şablonlar</h3>
+                                    <p>Özenle hazırlanmış şablonlarımız.</p>
+                                </a>
+                                <a href="#">
+                                    <h3>Güvenlik Eklentileri</h3>
+                                    <p>Kendinizi daha iyi korumanıza yardım edelim.</p>
+                                </a>
+                                <a href="#">
+                                    <h3>API Servislerimiz</h3>
+                                    <p>Bilgiler bizde gerisi sizde.</p>
+                                </a>
+                                <a href="#">
+                                    <h3>Assetlerimiz</h3>
+                                    <p>JS,CSS Ücretsiz & ücretli kütüphanemiz.</p>
+                                </a>
+                            </div>
+                            <div class="element" id="b-app">
+                                <a href="#">
+                                    <h3>Forum Uygulamaları</h3>
+                                    <p>Muhasebe programları, işletme takip programları.</p>
+                                </a>
+                                <a href="#">
+                                    <h3>Konsol Uygulamaları</h3>
+                                    <p>Koruma, manipüle etme programları.</p>
+                                </a>
+                            </div>
+                            <div class="element" id="b-game">
+                                <a href="#">
+                                    <h3>Unity Eklentileri</h3>
+                                    <p>Sizi üzmeyen eklentilerimiz var..</p>
+                                </a>
+                                <a href="#">
+                                    <h3>Karakter Modelleri</h3>
+                                    <p>Kurguladık ve yaptık.</p>
+                                </a>
+                                <a href="#">
+                                    <h3>Çevre Assetleri</h3>
+                                    <p>Atmosferiniz güzelleşsin.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <div class="right">
+                <form class="input-cont">
+                    <select name="category-selector" id="category-selector">
+                        <option value="all" selected>Tümü</option>
+                        <option value="web">Web</option>
+                        <option value="app">Program</option>
+                        <option value="game">Oyun</option>
+                    </select>
+                    <input type="text" class="search-input" placeholder="Arama yapın..." required>
+                    <button type="submit" id="search-button" class="info-box top btn">
+                        <i class="ri-search-line"></i>
+                        <span class="info">Ara</span>
+                    </button>
+                </form>
+                
+                <button class="provider btn outline dark info-box top close-item" onclick="themeChanger()"><i class="ri-moon-clear-line"></i>
+                    <span class="info" style="font-size: .6rem !important;">Temayı Değiştir</span>
+                </button>
+                
+                <button class="search-mobile-button btn outline dark mobile-button" onclick="search_open()">
+                    <i class="ri-search-line"></i> 
+                </button>
+                <button class="menu-button mobile-button btn outline dark close-item" >
+                    <i class="ri-menu-line"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas">
+        <div class="offcanvas-cont" onclick="offcanvas_open()"></div>
+        <div class="offcanvas-content">
+            <div class="menu-cont">
+                <div class="menu-item" style="display: flex;">
+                    <button class="menu-button-offcanvas"><span><i class="ri-login-circle-line"></i> Giriş Yap</span></button>
+                    <button class="menu-button-offcanvas"><span><i class="ri-account-circle-line"></i> Kayıt Ol</span></button>
+                </div>
+                <div class="menu-item">
+                    <button class="menu-button-offcanvas"><span><i class="ri-store-2-line"></i> Pazaryeri</span></button>
+                </div>
+                <div class="menu-item">
+                    <button class="menu-button-offcanvas" onclick="toggleSubMenu(this)"><span><i class="ri-pages-line"></i> Web</span> <i class="ri-arrow-down-s-line arrow"></i></button>
+                    <div class="menu-item-content">
+                        <ul>
+                            <li><a href="#">Şablonlar</a></li>
+                            <li><a href="#">Güvenlik Eklentileri</a></li>
+                            <li><a href="#">API Servislerimiz</a></li>
+                            <li><a href="#">Assetlerimiz</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <button class="menu-button-offcanvas" onclick="toggleSubMenu(this)"><span><i class="ri-window-line"></i> Program</span> <i class="ri-arrow-down-s-line arrow"></i></button>
+                    <div class="menu-item-content">
+                        <ul>
+                            <li><a href="#">Forum Uygulamaları</a></li>
+                            <li><a href="#">Konsol Uygulamaları</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <button class="menu-button-offcanvas" onclick="toggleSubMenu(this)"><span><i class="ri-gamepad-line"></i> Oyun</span> <i class="ri-arrow-down-s-line arrow"></i></button>
+                    <div class="menu-item-content">
+                        <ul>
+                            <li><a href="#">Unity Eklentileri</a></li>
+                            <li><a href="#">Karakter Modelleri</a></li>
+                            <li><a href="#">Çevre Assetleri</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/media.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/offcanvas.js"></script>
+    <script src="js/themechanger.js"></script>
+</body>
+</html>

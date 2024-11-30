@@ -1,0 +1,61 @@
+@import 'variables';
+
+html {
+    font-family: Arial, sans-serif;
+    background-color: $bg-color; // Aydınlık tema arka plan rengi
+    color: $text-color; // Aydınlık tema yazı rengi
+    transition: background-color .3s ease-out;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto; // Ortalamak için
+}
+
+i {
+    color: $c-green;
+}
+
+/* Bootstrap benzeri container genişlik ayarları */
+.container-xs { max-width: 100%; }
+.container-sm { max-width: 576px; }
+.container-md { max-width: 768px; }
+.container-lg { max-width: 992px; }
+.container-xl { max-width: 1200px; }
+.container-xxl { max-width: 1400px; }
+
+/* Font boyutları */
+.fs-xs { font-size: 14px; }
+.fs-sm { font-size: 15px; }
+.fs-md { font-size: 16px; }
+.fs-lg { font-size: 17px; }
+.fs-xl { font-size: 18px; }
+.fs-xxl { font-size: 19px; }
+
+/* Light tema için ek stil ayarları */
+button {
+    background-color: $primary-color; // Aydınlık tema için ana renk
+    color: white; // Yazı rengi
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: darken($primary-color, 10%); // Hover rengi
+    }
+}
+
+a {
+    color: $primary-color; // Link rengi
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline; // Hover durumu
+    }
+}

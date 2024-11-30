@@ -1,0 +1,107 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+
+.offcanvas {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: block;
+    @media (min-width: 900px) {
+        display: none;
+    }
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s ease-out;
+
+    .offcanvas-cont {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $hv-2;
+    }
+    .offcanvas-content {
+        position: fixed;
+        right: 0;
+        width: 80%;
+        @media (min-width: 500px) {
+            width: 50% !important;
+        }
+        background-color: $light-bg-color;
+        z-index: 11;
+        height: 100%;
+        transform: translateX(100%);
+        transition: .3s ease-out;
+        padding-top: 25px;
+
+        .menu-cont {
+            width: 100%;
+            
+            .menu-item {
+                width: 100%;
+                border-bottom: 1px solid $light-text-color;
+
+                .menu-button-offcanvas {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    background-color: transparent;
+                    color: $light-text-color;
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                    font-family: "Rubik", sans-serif;
+                    border-radius: 0;
+                    padding: 15px 20px;
+                    transition: .3s ease-out;
+                    i { color: $light-text-color; transition: .3s ease-out; }
+                    &:hover { background-color: $dark-bg-color; color: $dark-text-color; i { color: $dark-text-color; } }
+                }
+                .menu-item-content {
+                    display: none; // Hide submenu by default
+                    padding: 0px 20px;
+
+                    ul {
+                        list-style: none;
+                        padding: 0;
+                        width: 100%;
+
+                        li {
+                            width: 100%;
+
+                            a {
+                                padding: 7px 0;
+                                display: inline-block;
+                                font-size: 1.2rem;
+                                width: 100%;
+                                text-decoration: none;
+                                color: $light-text-color;
+                                &:hover {
+                                    opacity: .8;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.offcanvas-on {
+    opacity: 1;
+    pointer-events: auto;
+
+    .offcanvas-content {
+        transform: translateX(0%);
+    }
+}
+
+.search-open {
+    display: inline-block !important;
+}
